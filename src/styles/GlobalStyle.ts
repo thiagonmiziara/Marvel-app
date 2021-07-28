@@ -31,7 +31,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body{
-    background: var(--background);
+    background: var(--white);
     -webkit-font-smoothing: antialiased;
   }
 
@@ -52,4 +52,6 @@ export const GlobalStyle = createGlobalStyle`
     opacity: 0.6;
     cursor: not-allowed;
   }
+
+ 
  `;
