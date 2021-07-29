@@ -10,7 +10,7 @@ export const StyledHeader = styled.header`
   justify-content: space-between;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 999999;
 
   nav {
     width: 100%;

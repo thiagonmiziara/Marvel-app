@@ -29,45 +29,47 @@ export const StyledSwiper = styled.div`
     position: static !important;
   }
 
-  .swiper-slide {
-    text-align: center;
+  .swiper-slide span {
+    position: absolute;
+    bottom: 1.625rem;
+    color: var(--white);
+    transform: translate(7%, 0%);
     font-size: 1.125rem;
-    background: pink;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: "Oswald", sans-serif;
+    text-shadow: 0px 3px 6px #00000029;
   }
 
   .swiper-slide img {
+    position: relative;
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-bottom: 4px solid var(--red-1000);
   }
 
   .swiper-button-next,
   .swiper-button-prev {
-    height: 19px;
-    border: 3px solid var(--white);
-    padding: 20px;
+    height: 1.188rem;
+    border: 0.188rem solid var(--white);
+    padding: 1.25rem;
     color: var(--white) !important;
     fill: black !important;
     stroke: black !important;
+    top: -2.5rem;
   }
 
   .swiper-button-prev {
     left: 69.375rem;
-    top: -40px;
   }
 
   .swiper-button-next {
     right: 0;
-    top: -40px;
   }
 
   .swiper-button-prev:after,
   .swiper-button-next:after {
-    font-size: 20px !important;
+    font-size: 1.25rem !important;
     font-weight: bold !important;
   }
 `;
