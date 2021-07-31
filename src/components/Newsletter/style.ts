@@ -3,24 +3,19 @@ import styled from "styled-components";
 export const Container = styled.section`
   width: 100%;
   background: var(--black-1000);
-  margin-top: 268px;
-  padding: 174px 0;
+  margin-top: 16.75rem;
+  height: 21.75rem;
   display: flex;
 
   div {
     width: 80%;
-    /* margin: 0 auto; */
     display: flex;
 
     > article {
-      width: 408px;
-      height: 329px;
+      margin: -4.313rem auto 5.25rem auto;
       background: var(--red-1000);
-      padding: 38px 43px;
-      margin-top: -250px;
-      margin-left: 229px;
+
       h1 {
-        width: 288px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -30,6 +25,7 @@ export const Container = styled.section`
         font-weight: 700;
 
         color: var(--white);
+        padding: 30px 60px;
       }
     }
   }
@@ -39,9 +35,7 @@ export const Container = styled.section`
     flex-direction: column;
 
     p {
-      width: 274px;
-      margin-top: -100px;
-      padding-bottom: 40px;
+      padding: 60px 0;
       font-size: 20px;
       font-family: "Oswald", sans-serif;
       font-weight: 700;

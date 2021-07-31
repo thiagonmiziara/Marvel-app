@@ -1,3 +1,4 @@
+import { FormEvent } from "react";
 import { Container } from "./style";
 
 const Newsletter = () => {
@@ -5,15 +6,20 @@ const Newsletter = () => {
     <Container>
       <div>
         <article>
-          <h1>RECEBA AS NOVIDADES DA MARVEL</h1>
+          <h1>
+            RECEBA AS <br />
+            NOVIDADES
+            <br /> DA MARVEL
+          </h1>
         </article>
       </div>
       <div className='content'>
         <p>
-          Cadastre-se para receber nossas notícias em primeira mão<span>!</span>
+          Cadastre-se para receber nossas <br /> notícias em primeira mão
+          <span>!</span>
         </p>
 
-        <form>
+        <form onSubmit={(e: FormEvent) => e.preventDefault()}>
           <label>SEU MELHOR E-MAIL</label>
           <div>
             <input

@@ -38,6 +38,12 @@ export const Container = styled.section`
       color: var(--white);
       background: var(--red-1000);
       border: 0;
+
+      transition: filter 0.2s ease;
+
+      &:hover {
+        filter: brightness(0.95);
+      }
     }
 
     a {
