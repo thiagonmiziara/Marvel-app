@@ -1,22 +1,24 @@
 import { useEffect, useState } from "react";
 import SwiperCore, { Pagination, Navigation } from "swiper/core";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { StyledContainer, StyledSwiper } from "./style";
+import { Container, StyledSwiper } from "./style";
 import { api } from "../../service/api";
 
 SwiperCore.use([Pagination, Navigation]);
 
 interface CharactersData {
-  id: number;
-  name: string;
-  thumbnail: {
-    path: string;
-    extension: string;
-  };
+  Array: [
+    id: number,
+    name: string,
+    thumbnail: {
+      path: string;
+      extension: string;
+    }
+  ];
 }
 
 const Slider = () => {
-  const [characters, setCharacters] = useState([]);
+  const [characters, setCharacters] = useState<CharactersData[]>([]);
 
   useEffect(() => {
     Promise.all([
@@ -39,7 +41,7 @@ const Slider = () => {
         blackWidowResponse,
         ironManResponse,
       ]) => {
-        let heros: any = [
+        let heros: CharactersData[] = [
           thorResponse.data.data.results,
           hulkResponse.data.data.results,
           thanosResponse.data.data.results,
@@ -54,10 +56,8 @@ const Slider = () => {
     );
   }, []);
 
-  characters.map((hero: any) => console.log(hero));
-
   return (
-    <StyledContainer>
+    <Container>
       <div>
         <h3>PERSONAGENS EM DESTAQUE</h3>
       </div>
@@ -77,7 +77,7 @@ const Slider = () => {
         >
           {characters.map((hero: any) => {
             return (
-              <SwiperSlide key={hero.id}>
+              <SwiperSlide key={hero[0].id}>
                 <img
                   src={`${hero[0].thumbnail.path}.${hero[0].thumbnail.extension}`}
                   alt={hero[0].name}
@@ -88,7 +88,7 @@ const Slider = () => {
           })}
         </Swiper>
       </StyledSwiper>
-    </StyledContainer>
+    </Container>
   );
 };
 

@@ -6,6 +6,7 @@ import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import ListCharacters from "./components/ListCharacters";
+import Mastercard from "./components/Mastercad";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <Slider />
       <ListCharacters />
+      <Mastercard />
       <GlobalStyle />
     </div>
   );

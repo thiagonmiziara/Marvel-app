@@ -1,3 +1,5 @@
+import { StyledButton } from "./style";
+
 interface PaginationItemProps {
   number: number;
   isCurrent?: boolean;
@@ -10,8 +12,12 @@ const PaginationItem = ({
   isCurrent = false,
 }: PaginationItemProps) => {
   if (isCurrent) {
-    return <button disabled>{number}</button>;
+    return <StyledButton isActive={isCurrent}>{number}</StyledButton>;
   }
-  return <button onClick={() => onPageChange(number)}>{number}</button>;
+  return (
+    <StyledButton isActive={!!isCurrent} onClick={() => onPageChange(number)}>
+      {number}
+    </StyledButton>
+  );
 };
 export default PaginationItem;

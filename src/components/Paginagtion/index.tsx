@@ -1,4 +1,5 @@
 import PaginationItem from "./PaginationItem";
+import { Container } from "./style";
 
 interface PaginationProps {
   totalCountOfRegisters: number;
@@ -7,7 +8,7 @@ interface PaginationProps {
   onPageChange: (page: number) => void;
 }
 
-const siblingsCount = 1;
+const siblingsCount = 4;
 
 function generatePagesArray(from: number, to: number) {
   return [...new Array(to - from)]
@@ -20,7 +21,7 @@ function generatePagesArray(from: number, to: number) {
 const Pagination = ({
   totalCountOfRegisters,
   currentPage = 1,
-  registersPerPage = 10,
+  registersPerPage = 30,
   onPageChange,
 }: PaginationProps) => {
   const lastPage = Math.floor(totalCountOfRegisters / registersPerPage);
@@ -39,11 +40,7 @@ const Pagination = ({
       : [];
 
   return (
-    <div>
-      {/* <div>
-        <strong>0</strong> - <strong>10</strong> de <strong>100</strong>
-      </div> */}
-
+    <Container>
       <div>
         {currentPage > 1 + siblingsCount && (
           <>
@@ -86,7 +83,7 @@ const Pagination = ({
           </>
         )}
       </div>
-    </div>
+    </Container>
   );
 };
 

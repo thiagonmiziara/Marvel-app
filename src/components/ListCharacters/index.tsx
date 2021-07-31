@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../../service/api";
+import Loading from "../Loading";
 import Pagination from "../Paginagtion";
 import { Container, StyledDiv } from "./style";
 
@@ -15,17 +16,31 @@ interface CharactersData {
 const ListCharacters = () => {
   const [page, setPage] = useState(1);
   const [characters, setCharacters] = useState<CharactersData[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+
+  const limit: number = 30;
+  let offset: number = page * limit;
 
   useEffect(() => {
-    api
-      .get("characters?orderBy=name&", {
-        params: {
-          offset: page,
-          limit: 30,
-        },
-      })
-      .then((response) => setCharacters(response.data.data.results));
-  }, [page]);
+    async function getCharacters() {
+      try {
+        setLoading(true);
+        await api
+          .get("characters?orderBy=name&", {
+            params: {
+              offset,
+              limit,
+            },
+          })
+          .then((response) => setCharacters(response.data.data.results));
+      } catch (err) {
+        console.log(err);
+      }
+      setLoading(false);
+    }
+
+    getCharacters();
+  }, [page, offset]);
 
   return (
     <>
@@ -34,22 +49,30 @@ const ListCharacters = () => {
           <h2>LISTA DE PERSONAGENS DA MARVEL</h2>
         </div>
         <StyledDiv>
-          {characters.map((character) => {
-            return (
-              <div key={character.id}>
-                <img
-                  src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-                  alt=''
-                />
-                <span>{character.name}</span>
-              </div>
-            );
-          })}
+          {loading ? (
+            <Loading size={100} />
+          ) : (
+            <>
+              {characters.map((character) => {
+                return (
+                  <div className='card' key={character.id}>
+                    <img
+                      src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+                      alt=''
+                    />
+                    <div>
+                      <span>{character.name}</span>
+                    </div>
+                  </div>
+                );
+              })}
+            </>
+          )}
         </StyledDiv>
       </Container>
 
       <Pagination
-        totalCountOfRegisters={3000}
+        totalCountOfRegisters={1000}
         currentPage={page}
         onPageChange={setPage}
       />
