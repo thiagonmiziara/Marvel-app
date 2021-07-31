@@ -47,6 +47,10 @@ export const Container = styled.section`
       font-weight: 700;
       font-family: "Open Sans", sans-serif;
       font-size: 0.875rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 `;
