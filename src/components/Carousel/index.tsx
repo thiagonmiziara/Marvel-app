@@ -4,6 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Container, StyledSwiper } from "./style";
 import { api } from "../../service/api";
 
+import "swiper/swiper.scss";
+import "swiper/components/navigation/navigation.scss";
+import "swiper/components/pagination/pagination.scss";
+
 SwiperCore.use([Pagination, Navigation]);
 
 interface CharactersData {
@@ -17,7 +21,7 @@ interface CharactersData {
   ];
 }
 
-const Slider = () => {
+const Carousel = () => {
   const [characters, setCharacters] = useState<CharactersData[]>([]);
 
   useEffect(() => {
@@ -30,30 +34,32 @@ const Slider = () => {
       api.get("characters/1012200"),
       api.get("characters/1017109"),
       api.get("characters/1017104"),
-    ]).then(
-      ([
-        thorResponse,
-        hulkResponse,
-        thanosResponse,
-        capitanAmericaResponse,
-        blackPantherResponse,
-        spiderManResponse,
-        blackWidowResponse,
-        ironManResponse,
-      ]) => {
-        let heros: CharactersData[] = [
-          thorResponse.data.data.results,
-          hulkResponse.data.data.results,
-          thanosResponse.data.data.results,
-          capitanAmericaResponse.data.data.results,
-          spiderManResponse.data.data.results,
-          blackPantherResponse.data.data.results,
-          blackWidowResponse.data.data.results,
-          ironManResponse.data.data.results,
-        ];
-        setCharacters(heros);
-      }
-    );
+    ])
+      .then(
+        ([
+          thorResponse,
+          hulkResponse,
+          thanosResponse,
+          capitanAmericaResponse,
+          blackPantherResponse,
+          spiderManResponse,
+          blackWidowResponse,
+          ironManResponse,
+        ]) => {
+          let heros: CharactersData[] = [
+            thorResponse.data.data.results,
+            hulkResponse.data.data.results,
+            thanosResponse.data.data.results,
+            capitanAmericaResponse.data.data.results,
+            spiderManResponse.data.data.results,
+            blackPantherResponse.data.data.results,
+            blackWidowResponse.data.data.results,
+            ironManResponse.data.data.results,
+          ];
+          setCharacters(heros);
+        }
+      )
+      .catch(() => alert("Erro ao carregar dados da api-marvel"));
   }, []);
 
   return (
@@ -64,7 +70,17 @@ const Slider = () => {
 
       <StyledSwiper>
         <Swiper
-          slidesPerView={4.5}
+          breakpoints={{
+            768: {
+              width: 768,
+              slidesPerView: 1,
+            },
+
+            800: {
+              width: 992,
+              slidesPerView: 4.5,
+            },
+          }}
           spaceBetween={10}
           slidesPerGroup={1}
           loop={true}
@@ -92,4 +108,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default Carousel;

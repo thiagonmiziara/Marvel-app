@@ -1,15 +1,15 @@
 import Footer from "../Footer";
 import Header from "../Header";
 import ListCharacters from "../ListCharacters";
-import Mastercard from "../Mastercad";
+import Mastercard from "../Mastercard";
 import Newsletter from "../Newsletter";
-import Slider from "../Slider";
+import Carousel from "../Carousel";
 
 const Home = () => {
   return (
     <>
       <Header />
-      <Slider />
+      <Carousel />
       <ListCharacters />
       <Mastercard />
       <Newsletter />

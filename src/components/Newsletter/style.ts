@@ -20,12 +20,12 @@ export const Container = styled.section`
         align-items: center;
         justify-content: center;
 
-        font-size: 62px;
+        font-size: 3.875rem;
         font-family: "Oswald", sans-serif;
         font-weight: 700;
 
         color: var(--white);
-        padding: 30px 60px;
+        padding: 1.875rem 3.75rem;
       }
     }
   }
@@ -35,8 +35,8 @@ export const Container = styled.section`
     flex-direction: column;
 
     p {
-      padding: 60px 0;
-      font-size: 20px;
+      padding: 3.75rem 0;
+      font-size: 1.25rem;
       font-family: "Oswald", sans-serif;
       font-weight: 700;
       color: var(--white);
@@ -48,19 +48,19 @@ export const Container = styled.section`
     form {
       label {
         font-family: "Open Sans", sans-serif;
-        font-size: 13px;
+        font-size: 0.813rem;
         font-weight: 700;
         color: var(--white);
       }
       div {
-        margin-top: 5px;
+        margin-top: 0.313rem;
         input {
-          height: 61px;
-          width: 369px;
+          height: 3.813rem;
+          width: 24.75rem;
           font-family: "Open Sans", sans-serif;
-          font-size: 14px;
+          font-size: 0.875rem;
           font-weight: 700;
-          padding: 0 16px;
+          padding: 0 1rem;
           border: 1px solid var(--gray-50);
 
           &::placeholder {
@@ -70,20 +70,70 @@ export const Container = styled.section`
         }
 
         button {
-          width: 120px;
-          padding: 0 16px;
+          width: 7.5rem;
+          padding: 0 1rem;
 
           background: var(--red-1000);
           color: var(--white);
           border: none;
           font-family: "Open Sans", sans-serif;
           font-weight: 700;
-          font-size: 14px;
+          font-size: 0.875rem;
 
           transition: filter 0.2s ease;
 
           &:hover {
             filter: brightness(0.9);
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+    flex-direction: column;
+
+    > div {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+
+      > article {
+        padding: 0 0;
+
+        h1 {
+          padding: 1rem;
+        }
+      }
+    }
+
+    div.content {
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      width: 80%;
+
+      p {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      form {
+        width: 100%;
+
+        > div {
+          width: 100%;
+          margin-bottom: 1.5rem;
+
+          input {
+            width: 100%;
+          }
+
+          button {
+            width: 40%;
           }
         }
       }

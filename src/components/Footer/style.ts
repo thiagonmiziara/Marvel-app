@@ -14,10 +14,10 @@ export const Content = styled.div`
   div.info {
     width: 50%;
     display: flex;
-    gap: 30px;
+    gap: 1.875rem;
     img {
-      width: 30px;
-      height: 45px;
+      width: 1.875rem;
+      height: 2.813rem;
     }
 
     ul {
@@ -25,10 +25,10 @@ export const Content = styled.div`
         color: var(--white);
         font-family: "Oswald", sans-serif;
         font-weight: 600;
-        font-size: 19px;
+        font-size: 1.188rem;
       }
       li {
-        font-size: 14px;
+        font-size: 0.875rem;
         font-family: "Open Sans", sans-serif;
         list-style: none;
         color: var(--gray-400);
@@ -44,36 +44,39 @@ export const Content = styled.div`
   div.social {
     display: flex;
     align-items: flex-start;
-    gap: 100px;
+    gap: 6.25rem;
     div {
       width: 100%;
 
       p {
-        font-size: 19px;
+        font-size: 1.188rem;
         font-family: "Oswald", sans-serif;
         color: var(--white);
-        margin-bottom: 5px;
+        margin-bottom: 0.313rem;
       }
       div {
-        margin-bottom: 5px;
+        margin-bottom: 0.313rem;
         display: flex;
-        gap: 4px;
+        gap: 0.25rem;
         align-items: center;
-        img {
-          width: 60px;
-          height: 60px;
+        img.blog {
+          width: 3.75rem;
+          height: 3.75rem;
+
+          @media (max-width: 768px) {
+            display: none;
+          }
         }
         span {
           color: var(--white);
-          font-size: 14px;
-
+          font-size: 0.875rem;
           font-family: "Open Sans", sans-serif;
         }
       }
       a {
         font-family: "Open Sans", sans-serif;
         color: var(--gray-400);
-        margin-top: 10px;
+        margin-top: 0.625rem;
         &:hover {
           color: var(--red-1000);
         }
@@ -86,12 +89,35 @@ export const Content = styled.div`
       div {
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: 0.938rem;
         img {
-          width: 24px;
+          width: 1.5rem;
           cursor: pointer;
         }
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+
+    div.info {
+      width: 100%;
+      gap: 5rem;
+
+      ul {
+        width: 100%;
+
+        li {
+          margin-top: 0.3rem;
+        }
+      }
+    }
+
+    div.social {
+      margin-top: 3rem;
+      gap: 1rem;
     }
   }
 `;

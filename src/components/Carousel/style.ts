@@ -72,4 +72,26 @@ export const StyledSwiper = styled.div`
     font-size: 1.25rem !important;
     font-weight: bold !important;
   }
+
+  .swiper-container-horizontal
+    > .swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    background: var(--red-1000);
+  }
+
+  @media (max-width: 768px) {
+    padding: 0;
+    div {
+      .swiper-container {
+        position: relative !important;
+      }
+
+      .swiper-button-next {
+        display: none;
+      }
+      .swiper-button-prev {
+        display: none;
+      }
+    }
+  }
 `;

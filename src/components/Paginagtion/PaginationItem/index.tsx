@@ -1,3 +1,4 @@
+import useWindowSize from "../../../hooks/useWindowSize";
 import { StyledButton } from "./style";
 
 interface PaginationItemProps {
@@ -11,6 +12,23 @@ const PaginationItem = ({
   onPageChange,
   isCurrent = false,
 }: PaginationItemProps) => {
+  const widthPage: Array<number> = useWindowSize();
+  const widthMobile = widthPage[0] <= 768;
+
+  function handleWindowScrollTop() {
+    if (!widthMobile) {
+      window.scrollTo({
+        top: 1150,
+        behavior: "smooth",
+      });
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  }
+
   if (isCurrent) {
     return <StyledButton isActive={isCurrent}>{number}</StyledButton>;
   }
@@ -19,7 +37,7 @@ const PaginationItem = ({
       isActive={!!isCurrent}
       onClick={() => {
         onPageChange(number);
-        window.scrollTo(0, 1150);
+        handleWindowScrollTop();
       }}
     >
       {number}

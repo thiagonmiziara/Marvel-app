@@ -34,6 +34,7 @@ const Footer = () => {
             <p>Última do blog</p>
             <div>
               <img
+                className='blog'
                 src={blogImg}
                 alt='Imagem 3 crianças fantasiadas de capitã marvel'
               />

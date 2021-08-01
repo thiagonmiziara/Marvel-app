@@ -53,4 +53,13 @@ export const StyledDiv = styled.div`
       }
     }
   }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 550px) {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
 `;

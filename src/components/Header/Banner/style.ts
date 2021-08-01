@@ -3,7 +3,6 @@ import bannerImg from "../../../assets/images/banner.jpg";
 
 export const StyledSection = styled.section`
   width: 100%;
-  height: 613px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(${bannerImg}) no-repeat;
   background-size: cover;
@@ -19,6 +18,21 @@ export const StyledSection = styled.section`
     h1 {
       font: bold 6.25rem/8.438rem Oswald;
       color: var(--white);
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+    background-position: center;
+    padding-bottom: 20rem;
+    div {
+      display: flex;
+      left: 2rem;
+      top: 14rem;
+      h1 {
+        font-size: 3.3rem;
+        line-height: 3.2rem;
+      }
     }
   }
 `;

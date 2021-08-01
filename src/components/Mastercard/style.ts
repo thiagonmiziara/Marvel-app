@@ -58,5 +58,11 @@ export const Container = styled.section`
         text-decoration: underline;
       }
     }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.3rem;
+      }
+    }
   }
 `;
