@@ -1,6 +1,9 @@
 import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+html{
+  scroll-behavior: smooth;
+}
   :root{
     --white: #FFFFFF;
     --black-1000: #000000;

@@ -15,7 +15,13 @@ const PaginationItem = ({
     return <StyledButton isActive={isCurrent}>{number}</StyledButton>;
   }
   return (
-    <StyledButton isActive={!!isCurrent} onClick={() => onPageChange(number)}>
+    <StyledButton
+      isActive={!!isCurrent}
+      onClick={() => {
+        onPageChange(number);
+        window.scrollTo(0, 1150);
+      }}
+    >
       {number}
     </StyledButton>
   );

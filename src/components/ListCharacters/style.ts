@@ -8,7 +8,7 @@ export const Container = styled.section`
     width: 80%;
     margin: 0 auto;
     h2 {
-      margin-bottom: 40px;
+      margin-bottom: 2.5rem;
     }
   }
 `;

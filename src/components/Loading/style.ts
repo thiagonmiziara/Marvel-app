@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const LoadingContainer = styled.div`
   width: 100%;
   overflow: hidden;
+  height: 100vh;
 
   & > div {
     @keyframes spinner {

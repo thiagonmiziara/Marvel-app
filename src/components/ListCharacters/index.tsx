@@ -48,10 +48,11 @@ const ListCharacters = () => {
         <div>
           <h2>LISTA DE PERSONAGENS DA MARVEL</h2>
         </div>
-        <StyledDiv>
-          {loading ? (
-            <Loading size={100} />
-          ) : (
+
+        {loading ? (
+          <Loading size={100} />
+        ) : (
+          <StyledDiv>
             <>
               {characters.map((character) => {
                 return (
@@ -67,8 +68,8 @@ const ListCharacters = () => {
                 );
               })}
             </>
-          )}
-        </StyledDiv>
+          </StyledDiv>
+        )}
       </Container>
 
       <Pagination
