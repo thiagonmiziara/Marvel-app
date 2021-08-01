@@ -1,46 +1,100 @@
-# Getting Started with Create React App
+<div align="center" id="top"> 
+  <img src="public/marvel.gif" alt="Marvel App" />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+&#xa0;
 
-## Available Scripts
+  <!-- <a href="https://marvelapp.netlify.com">Demo</a> -->
+</div>
 
-In the project directory, you can run:
+<h1 align="center">Marvel App</h1>
 
-### `yarn start`
+<p align="center">
+  <img alt="Principal linguagem do projeto" src="https://img.shields.io/github/languages/top/thiagonmiziara/marvel-app?color=56BEB8">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <img alt="Quantidade de linguagens utilizadas" src="https://img.shields.io/github/languages/count/thiagonmiziara/marvel-app?color=56BEB8">
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  <img alt="Tamanho do repositório" src="https://img.shields.io/github/repo-size/thiagonmiziara/marvel-app?color=56BEB8">
 
-### `yarn test`
+  <img alt="Licença" src="https://img.shields.io/github/license/thiagonmiziara/marvel-app?color=56BEB8">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/thiagonmiziara/marvel-app?color=56BEB8" /> -->
 
-### `yarn build`
+  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/thiagonmiziara/marvel-app?color=56BEB8" /> -->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/thiagonmiziara/marvel-app?color=56BEB8" /> -->
+</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- Status -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- <h4 align="center">
+	🚧  Marvel App 🚀 Em construção...  🚧
+</h4>
 
-### `yarn eject`
+<hr> -->
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<p align="center">
+  <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0; 
+  <a href="#sparkles-funcionalidades">Funcionalidades</a> &#xa0; | &#xa0;
+  <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-pré-requesitos">Pré requisitos</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-começando">Começando</a> &#xa0; | &#xa0;
+  <a href="#memo-licença">Licença</a> &#xa0; | &#xa0;
+  <a href="https://github.com/thiagonmiziara" target="_blank">Autor</a>
+</p>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## :dart: Sobre
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Projeto desenvolvido com intuito de prática de React.
 
-## Learn More
+## :sparkles: Funcionalidades
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+:heavy_check_mark: Requisição Api da Marvel;\
+:heavy_check_mark: Carrossel com Swiper.js;\
+:heavy_check_mark: Responsivo;
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## :rocket: Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Swiper](https://swiperjs.com/)
+- [Axios](https://github.com/axios/axios)
+- [React](https://pt-br.reactjs.org/)
+- [Styled-components](https://styled-components.com/docs/basics)
+- [TypeScript](https://www.typescriptlang.org/)
+
+## :white_check_mark: Pré requisitos
+
+Antes de começar :checkered_flag:, você precisa ter o [Git](https://git-scm.com) e o [Node](https://nodejs.org/en/) instalados em sua maquina.
+
+## :checkered_flag: Começando
+
+```bash
+#.env.local
+$ exemplo do arquivo em .env.exemple
+
+# Clone este repositório
+$ git clone https://github.com/thiagonmiziara/marvel-app
+
+# Entre na pasta
+$ cd marvel-app
+
+# Instale as dependências
+$ yarn
+
+# Para iniciar o projeto
+$ yarn start
+
+# O app vai inicializar em <http://localhost:3000>
+```
+
+## :memo: Licença
+
+Este projeto está sob licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+
+Feito com :heart: por <a href="https://github.com/thiagonmiziara" target="_blank">thiagonmiziara</a>
+
+&#xa0;
+
+<a href="#top">Voltar para o topo</a>
