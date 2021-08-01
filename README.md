@@ -47,6 +47,10 @@
 ## :dart: Sobre
 
 Projeto desenvolvido com intuito de prática de React.
+Pode ser que ao acessar o link da vercel não consiga fazer a requisição
+da api-marvel pois estou aguardando eles autorizarem o endereço a ultilizar
+minhas credenciais.
+<img src="public/vercel.png"/>
 
 ## :sparkles: Funcionalidades
 
