@@ -103,9 +103,6 @@ export const Content = styled.div`
     width: 100%;
 
     div.info {
-      width: 100%;
-      gap: 5rem;
-
       ul {
         width: 100%;
 
